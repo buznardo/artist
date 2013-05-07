@@ -1,0 +1,26 @@
+/* Base font styling */
+html,
+button,
+input,
+select,
+textarea {
+  @include proxima;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* If something needs line height, I'll specify it. */
+body { line-height:1; }
+
+/* I'll style my own blockquotes thank you very much! */
+blockquote { margin:0; }
+
+/* Sometimes I don't want small text to be small...
+that made perfect sense until I read it back. */
+small { font-size:100% }
+
+/* Why would you want your address in italics? */
+address { font-style:normal }
+
+/* I'll style my own pre thank you very much! */
+pre { margin:0; }

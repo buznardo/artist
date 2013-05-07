@@ -1,0 +1,186 @@
+// Hero Section
+.hero-artist {
+  height:375px;
+  background:url("../../img/fans-stadium-s.jpg") no-repeat;
+  background-size:cover;
+  
+  // Load larger image on tablets
+  @include breakpoint(small) {
+    height:550px;
+    background:url("../../img/fans-stadium.jpg") no-repeat;
+    background-size:cover;
+  }
+  
+  .cta-con {
+    max-width:550px;
+    height:164px;
+    color:#fff;
+    text-align:center;
+    margin:0 auto;
+    padding-top:75px;
+    
+    @include breakpoint(small) {
+      padding-top:193px;
+    }
+    
+    h1 {
+     margin-bottom:7px;
+    }
+    
+    p {
+      margin-bottom:20px;
+      color:lighten($base, 35%);
+      font-size:17px;
+      line-height:1.6;
+    }
+    
+    h1, p {
+      //@include box-shadow(0,10px, 10px, rbga(0,0,0,.9));
+      //text-shadow:0 0 5px rgba(0,0,0,0.3);
+      text-shadow:0 -1px 1px rgba(0,0,0,0.3), 0 0 10px rgba(0,0,0,0.5);
+    }
+  }
+}
+
+
+
+// How it works
+.step {
+  @include breakpoint(small) {
+    display:inline-block;
+    width:32%;
+  }
+  
+  .icon {
+    display:inline-block;
+    background:url("../../img/process.jpg") no-repeat;
+    width:125px;
+    height:125px;
+    border:1px solid $light;
+    margin:30px 0 5px 0;
+    @include box-sizing;
+    @include corners(50%);
+    
+    @include breakpoint(small) {
+      margin:0 0 10px 0;
+    }
+  }
+  
+  p {
+    max-width:250px;
+    margin:0 auto;
+  }
+}
+
+#phone { background-position:0 0; }
+#wave { background-position:0 -125px; }
+#share { background-position:0 -250px; }
+
+
+
+
+// Benefits list
+.features {
+  
+  .grid {
+    padding-top:7%;
+    
+    &:first-child {
+      padding-top:0;
+    }
+    
+    .cell {
+      overflow:hidden;
+    }
+  }
+  
+  .bump-sml {    
+    @include breakpoint(medium) {
+      padding-top:40px;      
+    }
+  }
+  
+  .bump-big {
+    padding-top:80px;
+    
+    @include breakpoint(medium) {
+      padding-top:120px;
+    }
+  }
+  
+  img {
+    width:100%;
+    max-width:400px;
+  }
+  p {
+    max-width:450px;
+  }
+}
+
+
+
+
+// Experience video player feature
+.player {
+  position:relative;
+  
+  @include breakpoint(medium) {
+    padding-bottom:120px;
+  }
+  
+  h3 {
+    margin:10px 0 20px 0;
+    max-width:300px;
+    
+    @include breakpoint(medium) {
+      margin:80px 0 20px 0;
+    }
+  }
+  
+  p {
+    max-width:400px;
+    margin-bottom:20px;
+    
+    @include breakpoint(small) {
+      width:45%;
+      float:left;
+      margin-right:5%;
+    }
+    
+    @include breakpoint(medium) {
+      float:none;
+      width:auto;
+      margin-right:0;
+    }
+  }
+  
+  img {
+    width:95%;
+    float:right;
+    margin-top:20px;
+    
+    @include breakpoint(medium) {
+      width:55%;
+      max-width:800px;
+      position:absolute;
+      right:0;
+      bottom:0;
+    }
+  }
+}
+
+
+
+
+
+// Call to actions
+.cta {
+  p, a {
+    margin:7px 0;
+    
+    @include breakpoint(small) {
+      display:inline-block;
+      margin:0 10px;
+    }
+  }
+}

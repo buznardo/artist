@@ -1,0 +1,105 @@
+input[type=text],
+input[type=url],
+input[type=tel],
+input[type=number],
+input[type=color],
+input[type=email],
+input[type=search],
+input[type=url],
+input[type=datalist],
+input[type=password],
+textarea {
+  padding:10px;
+  border:1px solid;
+  border-top:1px solid;
+  font-size:13px;
+  letter-spacing:1px;
+  -webkit-appearance:none; // Override native input styling on iOS
+  @include corners(3px);
+  @include box-sizing;
+}
+
+// Fix line-height bug on submit buttons
+input[type=submit] {
+  line-height:1;
+}
+
+// Improve readability in textareas
+textarea {
+  line-height:1.6;
+}
+
+input, select, textarea {
+  /** Remove blue outline on focus **/
+  outline:0;
+  /** Disable tap highlight on iOS **/
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+label {
+  display:block;
+  font-size:11px;
+  font-weight:700;
+  text-transform:uppercase;
+  text-align:left;
+  letter-spacing:1px;
+  padding-bottom:7px;
+  cursor:default;
+}
+
+.input-wrap {
+  margin-bottom:15px;
+  
+  &.icon {
+    position:relative;
+    
+    input {
+      padding-left:36px;
+    }
+    
+    label {
+      position:absolute;
+      padding-left:11px;
+      line-height:28px;
+      font-size:38px;
+    }
+    
+  }
+}
+
+
+form.comfy {
+  @include breakpoint(small) {
+    input[type=text],
+    input[type=url],
+    input[type=tel],
+    input[type=number],
+    input[type=color],
+    input[type=email],
+    input[type=search],
+    input[type=url],
+    input[type=datalist],
+    input[type=password],
+    textarea {
+      padding:18px;
+      font-size:14px;
+    }
+    
+    .input-wrap {
+      margin-bottom:20px;
+      
+      &.icon {
+
+        input {
+          padding-left:43px;
+        }
+
+        label {
+          padding-left:14px;
+          line-height:46px;
+        }
+
+      }
+    }
+  }
+}

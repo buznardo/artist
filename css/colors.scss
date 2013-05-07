@@ -1,0 +1,197 @@
+.base {
+  background:$base;
+  color:lighten($base, 30%);
+
+  .highlight { color:#fff; }
+  .subdue { color:darken($base, 50%); }
+  
+  .fill { background:lighten($base, 5%); }
+  img.border { background:lighten($base, 5%); }
+  
+  input[type=text],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=color],
+  input[type=email],
+  input[type=search],
+  input[type=url],
+  input[type=datalist],
+  input[type=password],
+  textarea {
+    background:lighten($base, 10%);
+    border-color:$base;
+    border-top-color:darken($base, 10%);
+    color:lighten($base, 70%);
+    
+    &:focus { background:lighten($base, 15%); }
+  
+  }
+  
+  ::-webkit-input-placeholder {
+     color: lighten($base, 40%);
+  }
+
+  :-moz-placeholder {  
+     color: lighten($base, 40%);
+  }
+  
+}
+
+.accent {
+  background:$accent;
+  color:lighten($accent, 35%);
+  
+  .highlight { color:#fff; }
+  .subdue { color:darken($accent, 15%); }
+  
+  .fill { background:lighten($accent, 7%); }
+  img.border { background:lighten($accent, 5%); }
+  
+  input[type=text],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=color],
+  input[type=email],
+  input[type=search],
+  input[type=url],
+  input[type=datalist],
+  input[type=password],
+  textarea {
+    background:lighten($accent, 10%);
+    border-color:$accent;
+    border-top-color:darken($accent, 10%);
+    color:#fff;
+    
+    &:focus { background:lighten($accent, 12%); }
+  
+  }
+  
+  ::-webkit-input-placeholder {
+     color: lighten($accent, 40%);
+  }
+
+  :-moz-placeholder {  
+     color: lighten($accent, 40%);
+  }
+}
+
+.complement {
+  background:$complement;
+  color:lighten($complement, 20%);
+  
+  .highlight { color:#fff; }
+  .subdue { color:darken($complement, 15%); }
+  
+  .fill { background:lighten($complement, 5%); }
+  img.border { background:lighten($complement, 5%); }
+  
+  input[type=text],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=color],
+  input[type=email],
+  input[type=search],
+  input[type=url],
+  input[type=datalist],
+  input[type=password],
+  textarea {
+    background:lighten($complement, 6%);
+    border-color:$complement;
+    border-top-color:darken($complement, 10%);
+    color:#fff;
+    
+    &:focus { background:lighten($complement, 8%); }
+  
+  }
+  
+  ::-webkit-input-placeholder {
+     color: lighten($complement, 40%);
+  }
+
+  :-moz-placeholder {  
+     color: lighten($complement, 40%);
+  }
+  
+}
+
+.white {
+  background:#fff;
+  color:$light;
+  
+  .highlight { color:$base; }
+  
+  .fill { background:$neutral; }
+  img.border { border:1px solid $neutral; }
+  
+  input[type=text],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=color],
+  input[type=email],
+  input[type=search],
+  input[type=url],
+  input[type=datalist],
+  input[type=password],
+  textarea {
+    background:#fff;
+    border-color:$lightest;
+    border-top-color:darken($lightest, 10%);
+    color:$base;
+    
+    &:hover { border-color:darken($lightest, 10%); }
+    &:focus { background:#fff; border-color:$accent; }
+  
+  }
+  
+  ::-webkit-input-placeholder {
+     color: lighten($base, 30%);
+  }
+
+  :-moz-placeholder {  
+     color: lighten($base, 30%);
+  }
+  
+}
+
+.neutral {
+  background:$neutral;
+  color:darken($neutral, 25%);
+  
+  .highlight { color:$base; }
+  
+  .fill { background:lighten($neutral, 5%); }
+  img.border { background:lighten($neutral, 5%); }
+  
+  input[type=text],
+  input[type=url],
+  input[type=tel],
+  input[type=number],
+  input[type=color],
+  input[type=email],
+  input[type=search],
+  input[type=url],
+  input[type=datalist],
+  input[type=password],
+  textarea {
+    background:lighten($neutral, 5%);
+    border-color:$neutral;
+    border-top-color:darken($neutral, 10%);
+    color:$base;
+    
+    &:focus { background:#fff; }
+  
+  }
+  
+  ::-webkit-input-placeholder {
+     color: lighten($base, 25%);
+  }
+
+  :-moz-placeholder {  
+     color: lighten($base, 25%);
+  }
+  
+}

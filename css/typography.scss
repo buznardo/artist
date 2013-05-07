@@ -1,0 +1,60 @@
+// Fluid type
+html { font-size:95%; }
+p { line-height:155%; }
+
+@include breakpoint(small) {
+  html { font-size:100%; }
+	p { line-height:170%; }
+}
+
+@include breakpoint(medium) {
+  html { font-size:100%; }
+	p { line-height:185%; }
+}
+
+
+// Heading resets
+h1,h2,h3,h4,h5,h6,p { margin:0; padding:0; }
+
+
+// Heading styles
+h1,h2,h3,h4,h5,h6 {
+  
+  &.h-small {
+    font-size:20px;
+    font-size:1.25rem;
+    line-height:1.4;
+  }
+  
+  &.h-big {
+    font-size:26px;
+    font-size:1.6rem;
+    line-height:1.3;
+  }
+  
+  &.h-huge {
+    font-size:34px;
+    font-size:2.1rem;
+  }
+
+  &.h-thin {
+    @include allumi;
+  }
+}
+
+
+// Paragraph styles
+p, span, small, address {
+  &.small {
+    font-size:14px;
+    font-size:0.85rem;
+    line-height:1.7;
+  }
+  
+  &.big {
+    font-size:16px;
+    font-size:1.05rem;
+    line-height:1.6;
+    margin-top:10px;
+  }
+}

@@ -1,0 +1,212 @@
+// Button Sizes
+.btn-sml, .btn-big, .btn-huge {
+  
+  display:inline-block;
+  text-transform:uppercase;
+  font-weight:600;
+  letter-spacing:1px;
+  @include corners(2px);
+  -webkit-user-select:none; // Prevent text selection
+  
+  &:hover, &:focus, &:active {
+    text-decoration:none;
+    outline:none;
+  }
+  
+}
+
+.btn-sml {
+  font-size:11px;
+  padding:9px 16px;
+}
+
+.btn-big {
+  font-size:12px;
+  padding:17px 30px;
+}
+
+.btn-huge {
+  font-size:13px;
+  padding:20px 45px;
+}
+
+
+
+
+
+// Hollow Buttons
+.btn-hollow {
+  
+  background:none;
+  border:2px solid;
+  
+  &.btn-accent {
+    border-color:$accent;
+    color:$accent;
+    
+    &:hover, &:focus {
+      border-color:$base;
+      color:$base;
+    }
+  }
+  
+  &.btn-complement {
+    border-color:$complement;
+    color:$complement;
+    
+    &:hover, &:focus {
+      border-color:$base;
+      color:$base;
+    }
+  }
+  
+  &.btn-base {
+    border-color:$base;
+    color:$base;
+    
+    &:hover, &:focus {
+      border-color:$accent;
+      color:$accent;
+    }
+  }
+  
+  &.btn-transparent {
+    border-color:#fff; // ie fallback
+    border-color:rgba(255,255,255,.4);
+    color:#fff; // ie fallback
+    color:rgba(255,255,255,.85);
+    
+    &:hover, &:focus {
+      background:rgba(255,255,255,.05);
+      color:#fff;
+    }
+  }
+  
+}
+
+
+
+
+
+// Solid Buttons
+.btn-solid {
+  
+  border:2px solid;
+  
+  &:active {
+    @include box-shadow(0,1px,1px,rgba(0,0,0,.3) inset);
+  }
+  
+  &.btn-accent {
+    background:$accent;
+    border-color:$accent;
+    color:#fff;
+    
+    &:hover, &:focus {
+      background:lighten($accent, 5%);
+      border-color:lighten($accent, 5%);
+    }
+    
+    &:active {
+      background:$accent;
+      border-color:darken($accent, 5%);
+      border-bottom-color:$accent;
+    }
+  }
+  
+  &.btn-complement {
+    background:$complement;
+    border-color:$complement;
+    color:#fff;
+    
+    &:hover, &:focus {
+      background:lighten($complement, 5%);
+      border-color:lighten($complement, 5%);
+    }
+    
+    &:active {
+      background:$complement;
+      border-color:darken($complement, 5%);
+      border-bottom-color:$complement;
+    }
+  }
+  
+  &.btn-base {
+    background:$base;
+    border-color:$base;
+    color:#fff;
+    
+    &:hover, &:focus {
+      background:lighten($base, 5%);
+      border-color:lighten($base, 5%);
+    }
+    
+    &:active {
+      background:$base;
+      border-color:darken($base, 5%);
+      border-bottom-color:$base;
+    }
+  }
+  
+  &.btn-neutral {
+    background:$neutral;
+    border-color:$neutral;
+    color:darken($neutral, 25%);
+    
+    &:hover, &:focus {
+      background:lighten($neutral, 4%);
+      border-color:lighten($neutral, 4%);
+    }
+    
+    &:active {
+      background:$neutral;
+      border-color:darken($neutral, 5%);
+      border-bottom-color:$neutral;
+    }
+  }
+  
+  &.btn-light {
+    background:$light;
+    border-color:$light;
+    color:#fff;
+    
+    &:hover, &:focus {
+      background:lighten($light, 4%);
+      border-color:lighten($light, 4%);
+    }
+    
+    &:active {
+      background:$light;
+      border-color:darken($light, 5%);
+      border-bottom-color:$light;
+    }
+  }
+
+  &.btn-transparent {
+    background:#fff; // ie fallback
+    background:rgba(255,255,255,.3);
+    border-color:#fff; // ie fallback
+    border-color:rgba(255,255,255,.2);
+    color:#fff;
+    
+    &:hover, &:focus {
+      background:rgba(255,255,255,.35);
+    }
+  }
+  
+}
+
+
+
+
+
+
+// Disabled button
+.btn-disabled, .btn-sml[disabled], .btn-big[disabled], .btn-huge[disabled] {
+  background:#e1e4e9 !important;
+  box-shadow:none !important;
+  border-color:#e1e4e9 !important;
+  text-shadow:none !important;
+  color:#b6bbc8 !important;
+  cursor:default;
+}

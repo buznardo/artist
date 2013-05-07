@@ -1,0 +1,110 @@
+html, body { height:100%; } // Only for stretch div
+.left { text-align:left; }
+.center { text-align:center; }
+.right { text-align:right; }
+.fl { float:left; }
+.fr { float:right; }
+.w-100 { width:100%; }
+
+
+// Hide site until Typekit loads
+body {
+  opacity: 1;
+  @include transition(.3s);
+}
+
+// Fade in site after Typekit loads
+.wf-loading body {
+  overflow: hidden;
+  opacity: 0;
+}
+
+
+section, header, footer {
+  @include clearfix; // Clear floats
+}
+
+.grid {
+  overflow:hidden;
+}
+
+// Wrapper div
+.con {
+  width:90%;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+
+// Margins
+.m-top {
+  margin-top:5%;
+  
+  @include breakpoint(small) {
+    margin-top:4%;
+  }
+  
+  @include breakpoint(medium) {
+    margin-top:3%;
+  }
+}
+
+.m-bottom {
+  margin-bottom:5%;
+  
+  @include breakpoint(small) {
+    margin-bottom:6%;
+  }
+  
+  @include breakpoint(medium) {
+    margin-bottom:5%;
+  }
+}
+
+
+// Padding
+.p-top {
+  padding-top:10%;
+  
+  @include breakpoint(small) {
+    padding-top:6%;
+  }
+  
+  @include breakpoint(medium) {
+    padding-top:5%;
+  }
+  
+  @include breakpoint(large) {
+    padding-top:3%;
+  }
+}
+
+.p-bottom {
+  padding-bottom:10%;
+  
+  @include breakpoint(small) {
+    padding-bottom:6%;
+  }
+  
+  @include breakpoint(medium) {
+    padding-bottom:5%;
+  }
+  
+  @include breakpoint(large) {
+    padding-bottom:3%;
+  }
+}
+
+
+
+// Make a div 100% height of viewport
+.stretch {
+  padding-top:20%;
+  padding-bottom:20%;
+  
+  @include breakpoint(small) {
+    padding-top:0;
+    padding-bottom:0;
+    height:100%; 
+  }
+}

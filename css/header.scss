@@ -1,0 +1,166 @@
+header.stranger {
+  background:$base;
+  padding:0 0 20px 0;
+  margin-top:-180px; // Hide login form
+  
+  // Add login transition effect on tablets
+  @include breakpoint(small) {
+    margin-top:-78px;
+    -webkit-transition:margin 300ms cubic-bezier(0, 0, 0, 1);
+       -moz-transition:margin 300ms cubic-bezier(0, 0, 0, 1);
+        -ms-transition:margin 300ms cubic-bezier(0, 0, 0, 1);
+         -o-transition:margin 300ms cubic-bezier(0, 0, 0, 1);
+            transition:margin 300ms cubic-bezier(0, 0, 0, 1);
+  }
+  
+  // Change login layout on desktops
+  @include breakpoint(medium) {
+    margin-top:0;
+  }
+  
+  &.show {
+    margin-top:0;
+    
+    .login-form {
+      opacity:1;
+      @include scale(1);
+    }
+  }
+  
+  .con {
+    position:relative;
+  }
+  
+  .login-form {
+    @include clearfix;
+    padding:20px 0;
+    border-bottom:1px solid darken($base, 10%);
+    @include box-sizing;
+    
+    .input-wrap {
+      input {
+        border:0;
+      }
+      
+      ::-webkit-input-placeholder {
+         color: lighten($base, 30%);
+      }
+
+      :-moz-placeholder {  
+         color: lighten($base, 30%);
+      }
+      
+      // Change appearance on desktops
+      @include breakpoint(small) {
+        width:41%;
+        float:left;
+        margin:0 1% 0 0;
+      }
+      
+      // Change appearance on desktops
+      @include breakpoint(medium) {
+        width:100%;
+        margin-bottom:10px;
+        
+        input {
+          border:1px solid $lightest;
+          border-top-color:darken($lightest, 10%);
+          
+          &:hover { border-color:darken($lightest, 10%); }
+          &:focus { background:#fff; border-color:$light; }
+        }
+      }
+    }
+    
+    // Change appearance on desktops
+    @include breakpoint(medium) {
+      opacity:0;
+      position:absolute;
+      right:0;
+      top:80px;
+      width:275px;
+      background:#fff;
+      padding:25px;
+      box-shadow:0 3px 12px rgba(0,0,0,.35);
+      @include corners(3px);
+      @include scale(0.9);
+      -webkit-transition:all 150ms cubic-bezier(1, 0, 0, 2);
+         -moz-transition:all 150ms cubic-bezier(1, 0, 0, 2);
+          -ms-transition:all 150ms cubic-bezier(1, 0, 0, 2);
+           -o-transition:all 150ms cubic-bezier(1, 0, 0, 2);
+              transition:all 150ms cubic-bezier(1, 0, 0, 2);
+    }
+    
+    .login-submit {
+      height:36px;
+      display:inline-block;
+      text-transform:uppercase;
+      font-weight:600;
+      letter-spacing:1px;
+      @include corners(2px);
+      font-size:11px;
+      width:90px;
+      -webkit-user-select:none; // Prevent text selection
+      @include box-sizing;
+
+      &:hover, &:focus, &:active {
+        text-decoration:none;
+        outline:none;
+      }
+      
+      @include breakpoint(small) {
+        width:16%;
+      }
+      
+      @include breakpoint(medium) {
+        width:90px;
+        height:40px;
+      }
+    }
+    
+    // This provides a relative container for the arrow
+    .arrow-container {
+      position:relative;
+      
+      // Make arrow pointer with CSS
+      .arrow-up {
+        display:none;
+        position:absolute;
+        width: 0; 
+      	height: 0; 
+      	border-left: 12px solid transparent;
+      	border-right: 12px solid transparent;
+      	border-bottom: 12px solid #fff;
+        top:-37px;
+        right:0;
+        
+        // Only make arrow visible on desktops
+        @include breakpoint(medium) {
+          display:block;
+        }
+      }
+    }
+  }
+  
+  .nav {
+    clear:both;
+    border-top:1px solid lighten($base, 9%);
+    padding-top:20px;
+  }
+  
+  .logo {
+    background:url(../../img/45sound_logo.png) no-repeat;
+    float:left;
+    height:35px;
+    width:80px;
+    text-indent:-9999px; // Hide text
+  }
+  
+  .login {
+    float:right;
+  }
+  
+  &.show {
+    margin-top:0;
+  }
+}
