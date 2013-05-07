@@ -1,16 +1,16 @@
 $(function() {
-    
+
     // Toggle mobile header nav
     $('.btn-sml').click(function () {
-      
+
       // Slide down login form
       $('.stranger').toggleClass('show');
-      
+
       // Autofocus email input
       $('#email').focus();
-      
+
     });
-    
+
     // Call the functions in helper.js
     MBP.scaleFix();
     MBP.hideUrlBarOnLoad();
@@ -19,5 +19,5 @@ $(function() {
     MBP.preventScrolling();
     MBP.preventZoom();
     MBP.startupImage();
-    
+
 });
