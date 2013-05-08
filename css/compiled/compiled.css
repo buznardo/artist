@@ -1558,10 +1558,10 @@ header.stranger {
   margin: 0 auto; }
 
 #phone {
-  background-position: 0 0; }
+  background-position: 0 1px; }
 
 #wave {
-  background-position: 0 -125px; }
+  background-position: 0 -124px; }
 
 #share {
   background-position: 0 -250px; }
