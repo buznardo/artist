@@ -45,6 +45,12 @@
 
 
 // How it works
+#process h1 {
+  @include breakpoint(medium) {
+    padding:0 250px;    
+  }
+}
+
 .step {
   @include breakpoint(small) {
     display:inline-block;
