@@ -1099,6 +1099,12 @@ a, a:visited {
   a:hover, a:visited:hover {
     text-decoration: underline; }
 
+a, a:visited, button, input {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+
 html {
   font-size: 95%; }
 
@@ -1628,3 +1634,15 @@ header.stranger {
     .cta p, .cta a {
       display: inline-block;
       margin: 0 10px; } }
+
+.marketing-footer small {
+  float: left; }
+.marketing-footer nav {
+  float: right; }
+  .marketing-footer nav a, .marketing-footer nav a:visited {
+    float: left;
+    color: #8ba0b4;
+    margin-left: 20px; }
+    .marketing-footer nav a:hover, .marketing-footer nav a:visited:hover {
+      text-decoration: none;
+      color: #39414f; }

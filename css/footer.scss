@@ -1,0 +1,20 @@
+.marketing-footer {
+  small {
+    float:left;
+  }
+  
+  nav {
+    float:right;
+    
+    a, a:visited {
+      float:left;
+      color:darken($neutral, 30%);
+      margin-left:20px;
+      
+      &:hover {
+        text-decoration:none;
+        color:$base;
+      }
+    }
+  }
+}

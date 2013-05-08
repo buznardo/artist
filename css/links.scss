@@ -6,3 +6,7 @@ a, a:visited {
     text-decoration:underline;
   }
 }
+
+a, a:visited, button, input {
+  @include transition(0.2s);
+}
